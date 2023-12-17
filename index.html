@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Kadai</title>
+    <link href="styles.css" rel="stylesheet"/>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo"><h1>GameKadai<span>.com</span></h1></div>
+            <div class="navbar">
+                <ul class="menu-links">
+                    <i id="close-menu-btn" class='bx bx-x'></i>
+                    <li><a href="#" class="menu-items">Home</a></li>
+                    <li><a href="#" class="menu-items">Rent Consoles</a></li>
+                    <li><a href="#" class="menu-items">Accessories</a></li>
+                    <li><a href="#" class="menu-items">About us</a></li>
+                </ul>
+            </div>
+            <i id="menu-btn" class='bx bx-menu-alt-right'></i>
+        </nav>
+    </header>
+    <section class="hero-section">
+        <div class="hero-content">
+            <h1>One point solution for all your gaming desires</h1>
+            <p>Elevate your gaming experience at GameKadai. Explore the latest releases, power up with cutting-edge consoles and premium accessories. Console rentals available </p>
+            <button>Learn more</button>
+        </div>
+    </section>
+
+    <script>
+        const header = document.querySelector('header');
+        const menuBtn = document.querySelector('#menu-btn');
+        const closeMenuBtn = document.querySelector('#close-menu-btn')
+
+        menuBtn.addEventListener("click",()=>{
+            header.classList.toggle('show-mobile-menu');
+        });
+
+        closeMenuBtn.addEventListener("click",()=>{
+            menuBtn.click();
+        });
+    </script>
+</body>
+</html>
